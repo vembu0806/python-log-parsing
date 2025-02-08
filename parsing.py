@@ -4,8 +4,8 @@ import argparse
 from elasticsearch import Elasticsearch
 from datetime import datetime
 
-# Example log line format:
-# 2024-06-15 12:34:56,789 - INFO - User logged in successfully.
+# Example log-line format:
+# 2024-06-13 12:34:56,789 - INFO - User logged in successfully.
 LOG_PATTERN = re.compile(
     r'^(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (?P<level>[A-Z]+) - (?P<message>.*)$'
 )
@@ -57,7 +57,7 @@ def main():
     parser.add_argument("--index", default="application_logs", help="Elasticsearch index name")
     args = parser.parse_args()
 
-    # Connect to Elasticsearch
+    # Connect to elasticsearch
     es_client = Elasticsearch([{"host": args.es_host, "port": args.es_port}])
     if not es_client.ping():
         print("Error: Could not connect to Elasticsearch.")
