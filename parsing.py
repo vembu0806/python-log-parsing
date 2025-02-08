@@ -5,7 +5,7 @@ from elasticsearch import Elasticsearch
 from datetime import datetime
 
 # Example log-line format:
-# 2024-06-13 12:34:56,789 - INFO - User logged in successfully.
+# 2024-06-14 12:34:56,789 - INFO - User logged in successfully.
 LOG_PATTERN = re.compile(
     r'^(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (?P<level>[A-Z]+) - (?P<message>.*)$'
 )
