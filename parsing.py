@@ -57,7 +57,7 @@ def main():
     parser.add_argument("--index", default="application_logs", help="Elasticsearch index name")
     args = parser.parse_args()
 
-    # Connect to elasticsearch
+    # Connect to Elasticsearch
     es_client = Elasticsearch([{"host": args.es_host, "port": args.es_port}])
     if not es_client.ping():
         print("Error: Could not connect to Elasticsearch.")
