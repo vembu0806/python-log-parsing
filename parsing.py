@@ -65,6 +65,7 @@ def main():
 
     print(f"Processing log file: {args.log_file}")
     process_log_file(args.log_file, es_client, args.index)
+    
     print("Log processing completed.")
 
 if __name__ == "__main__":
